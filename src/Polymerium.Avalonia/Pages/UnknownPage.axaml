@@ -177,7 +177,7 @@
                         Theme="{StaticResource GhostButtonTheme}" />
                     <HyperlinkButton
                         Content="Hyperlink"
-                        NavigateUri="https://github.com/d3ara1n/Polymerium" />
+                        NavigateUri="https://github.com/reqinme/QinmoLauncher" />
 
                     <husk:GrowlItem
                         x:Name="Notification"

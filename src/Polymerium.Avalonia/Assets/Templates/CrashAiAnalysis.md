@@ -1,4 +1,4 @@
-# Polymerium Crash Analysis Execution Prompt
+# QinmoLauncher Crash Analysis Execution Prompt
 
 Generated at: `{{generated_at}}`
 
@@ -110,7 +110,7 @@ Your answer must:
 
 ## Runtime Environment
 
-- Polymerium version: `{{polymerium_version}}`
+- QinmoLauncher version: `{{qinmolauncher_version}}`
 - Build configuration: `{{build_configuration}}`
 - UI language: `{{ui_language}}`
 - Operating system: `{{operating_system}}`

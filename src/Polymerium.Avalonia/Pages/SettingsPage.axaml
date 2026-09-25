@@ -872,7 +872,7 @@
                                 <Run Text="Source Code:" />
                                 <HyperlinkButton
                                     Content="GitHub"
-                                    NavigateUri="https://github.com/d3ara1n/Polymerium" />
+                                    NavigateUri="https://github.com/reqinme/QinmoLauncher" />
                                 <Run Text="Documentation:" />
                                 <HyperlinkButton
                                     Content="polymerium.dearain.dev"
@@ -880,7 +880,7 @@
                                 <Run Text="License:" />
                                 <HyperlinkButton
                                     Content="MIT"
-                                    NavigateUri="https://github.com/d3ara1n/Polymerium/blob/master/LICENSE.txt" />
+                                    NavigateUri="https://github.com/reqinme/QinmoLauncher/blob/main/LICENSE.txt" />
                             </TextBlock>
                             <TextBlock ClipToBounds="False">
                                 <Run Text="Image in the Settings Page:" />

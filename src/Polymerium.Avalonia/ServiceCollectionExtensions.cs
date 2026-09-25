@@ -12,7 +12,7 @@ namespace Polymerium.Avalonia;
 
 public static class ServiceCollectionExtensions
 {
-    private const string MIRRORCHYAN_PRODUCT_ID = "Polymerium";
+    private const string MIRRORCHYAN_PRODUCT_ID = "QinmoLauncher";
 
     #region Nested type: $extension
 
@@ -40,7 +40,7 @@ public static class ServiceCollectionExtensions
         public IServiceCollection AddVelopackGithubSource()
         {
             services.AddSingleton<IFileDownloader, FactoryFileDownloader>();
-            services.AddSingleton<GithubSource>(sp => new("https://github.com/d3ara1n/Polymerium",
+            services.AddSingleton<GithubSource>(sp => new("https://github.com/reqinme/QinmoLauncher",
                                                          null,
                                                          !string.IsNullOrEmpty(GitVersionInformation
                                                              .PreReleaseTag),

@@ -125,7 +125,7 @@ public static partial class ChangelogParserHelper
             }
 
             references.Add(new(value, GitHubIssue().IsMatch(value)
-                                          ? new Uri($"https://github.com/d3ara1n/Polymerium/issues/{value[1..]}")
+                                          ? new Uri($"https://github.com/reqinme/QinmoLauncher/issues/{value[1..]}")
                                           : null));
         }
 

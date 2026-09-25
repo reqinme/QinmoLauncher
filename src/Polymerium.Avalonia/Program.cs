@@ -29,13 +29,13 @@ internal static class Program
 
     public static readonly string CommitHash = GitVersionInformation.ShortSha;
 
-    public static readonly string RepositoryUrl = "https://github.com/d3ara1n/Polymerium";
+    public static readonly string RepositoryUrl = "https://github.com/reqinme/QinmoLauncher";
 
     public static readonly string DocumentationUrl = "https://polymerium.dearain.dev";
 
-    public static readonly string IssuesUrl = "https://github.com/d3ara1n/Polymerium/issues";
+    public static readonly string IssuesUrl = "https://github.com/reqinme/QinmoLauncher/issues";
 
-    public static readonly string LicenseUrl = "https://github.com/d3ara1n/Polymerium/blob/main/LICENSE.txt";
+    public static readonly string LicenseUrl = "https://github.com/reqinme/QinmoLauncher/blob/main/LICENSE.txt";
 
     public static readonly string MagicWords = "say u say me";
 

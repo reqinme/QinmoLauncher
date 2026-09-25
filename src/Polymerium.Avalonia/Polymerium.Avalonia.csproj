@@ -16,9 +16,9 @@
         <!-- Nuget -->
         <Title>QinmoLauncher</Title>
         <Authors>reqinme</Authors>
-        <PackageProjectUrl>https://github.com/d3ara1n/Polymerium</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/d3ara1n/Polymerium/blob/main/LICENSE.txt</PackageLicenseUrl>
-        <RepositoryUrl>https://github.com/d3ara1n/Polymerium</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/reqinme/QinmoLauncher</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/reqinme/QinmoLauncher/blob/main/LICENSE.txt</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/reqinme/QinmoLauncher</RepositoryUrl>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
