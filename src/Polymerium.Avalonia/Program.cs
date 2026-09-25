@@ -96,7 +96,7 @@ internal static class Program
         #region 1. 服务已构造，现在初始化这些服务
 
         var configurationService = Services.GetRequiredService<ConfigurationService>();
-        var culture = GetSafeCultureInfo(configurationService.Value.ApplicationLanguage);
+        var culture = GetSafeCultureInfo(Configuration.ResolveLanguage(configurationService.Value.ApplicationLanguage));
         CultureInfo.CurrentCulture = culture;
         CultureInfo.CurrentUICulture = culture;
         CultureInfo.DefaultThreadCurrentCulture = culture;

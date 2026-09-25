@@ -45,6 +45,41 @@ public class Configuration
     public const string UPDATE_SOURCE = "Update.Source";
     public const string UPDATE_MIRRORCHYAN_CDK = "Update.MirrorChyan.Cdk";
 
+    public static string[] SupportedLanguages { get; } = ["en-US", "zh-Hans"];
+
+    // NOTE: 系统语言与已存值都可能带具体区域性（zh-CN），而资源只提供中性脚本名（zh-Hans）。
+    //  两者不按语言子标记对齐就会匹配不到资源，并静默回退到英文界面。
+    public static string ResolveLanguage(string? name)
+    {
+        var language = LanguageOf(name);
+        foreach (var candidate in SupportedLanguages)
+        {
+            if (LanguageOf(candidate) == language)
+            {
+                return candidate;
+            }
+        }
+
+        return SupportedLanguages[0];
+    }
+
+    private static string LanguageOf(string? name)
+    {
+        if (string.IsNullOrEmpty(name))
+        {
+            return CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
+        }
+
+        try
+        {
+            return CultureInfo.GetCultureInfo(name).TwoLetterISOLanguageName;
+        }
+        catch (CultureNotFoundException)
+        {
+            return string.Empty;
+        }
+    }
+
     private static readonly Dictionary<string, object?> DEFAULTS = new()
     {
         { APPLICATION_SUPERPOWER_ACTIVATED, false },
@@ -59,7 +94,7 @@ public class Configuration
         },
         { APPLICATION_STYLE_BACKGROUND, 4 },
         { APPLICATION_STYLE_THEME_VARIANT, 0 },
-        { APPLICATION_LANGUAGE, CultureInfo.InstalledUICulture.Name },
+        { APPLICATION_LANGUAGE, ResolveLanguage(null) },
         { APPLICATION_WINDOW_WIDTH, 1111.0 },
         { APPLICATION_WINDOW_HEIGHT, 666.0 },
         { APPLICATION_FONT_GLOBAL, string.Empty },
@@ -88,8 +123,6 @@ public class Configuration
         { DOWNLOAD_PARALLELISM, 0u },
         { DOWNLOAD_ATTEMPT_TIMEOUT, 0u }
     };
-
-    public static string[] SupportedLanguages { get; } = ["en-US", "zh-Hans"];
 
     public bool ApplicationSuperPowerActivated { get; set; } = AccessDefault<bool>(APPLICATION_SUPERPOWER_ACTIVATED);
 
