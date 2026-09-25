@@ -13,7 +13,7 @@ public static class AppBuilderExtensions
            .ConfigureFonts(fontManager =>
             {
                 fontManager.AddFontCollection(new EmbeddedFontCollection(new("fonts:AlimamaFangYuanTi"),
-                                                                         new("avares://Polymerium/Assets/Fonts/AlimamaFangYuanTi")));
+                                                                         new("avares://QinmoLauncher/Assets/Fonts/AlimamaFangYuanTi")));
                 fontManager.AddFontCollection(RuntimeFontCollection.Instance);
             })
            .With(new FontManagerOptions { DefaultFamilyName = "fonts:AlimamaFangYuanTi#AlimamaFangYuanTi" });

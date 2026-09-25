@@ -26,9 +26,9 @@ namespace Polymerium.Avalonia.Services;
 /// </summary>
 public sealed class SkinRenderService(HttpClient httpClient, SkinRenderer renderer, ILogger<SkinRenderService> logger)
 {
-    private const string SteveAssetUri = "avares://Polymerium/Assets/Images/Skins/Steve.png";
-    private const string AlexAssetUri = "avares://Polymerium/Assets/Images/Skins/Alex.png";
-    private const string HerobrineAssetUri = "avares://Polymerium/Assets/Images/Skins/Herobrine.png";
+    private const string SteveAssetUri = "avares://QinmoLauncher/Assets/Images/Skins/Steve.png";
+    private const string AlexAssetUri = "avares://QinmoLauncher/Assets/Images/Skins/Alex.png";
+    private const string HerobrineAssetUri = "avares://QinmoLauncher/Assets/Images/Skins/Herobrine.png";
 
     /// <summary>
     ///     第三方皮肤镜像根：按 UUID 返回原始皮肤 PNG（64×64 展开图），供本地渲染。

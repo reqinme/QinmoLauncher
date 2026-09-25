@@ -22,7 +22,7 @@ namespace Polymerium.Avalonia;
 
 internal static class Program
 {
-    public static readonly string Brand = "Polymerium";
+    public static readonly string Brand = "QinmoLauncher";
 
     public static readonly string Version = GitVersionInformation.SemVer;
 
@@ -59,7 +59,7 @@ internal static class Program
 
         #region 0. 这些设置需要在整个应用启动的第一时间完成
 
-        PathDef.BrandNames = new("polymerium", "Polymerium", "dev.dearain.Polymerium");
+        PathDef.BrandNames = new("qinmolauncher", "QinmoLauncher", "dev.reqinme.qinmolauncher");
 
         if (!Startup.InitializeUnhostedServices())
         {

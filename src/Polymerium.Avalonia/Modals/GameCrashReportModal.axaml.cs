@@ -31,7 +31,7 @@ public partial class GameCrashReportModal : Modal
     private const int MAX_UPLOAD_BYTES = 10 * 1024 * 1024 - 1;
     private const int MAX_CRASH_REPORT_UPLOAD_LINES = 25_000;
 
-    private static readonly Uri AiTemplateUri = new("avares://Polymerium/Assets/Templates/CrashAiAnalysis.md");
+    private static readonly Uri AiTemplateUri = new("avares://QinmoLauncher/Assets/Templates/CrashAiAnalysis.md");
 
     public static readonly StyledProperty<CrashReportModel?> ReportProperty =
         AvaloniaProperty.Register<GameCrashReportModal, CrashReportModel?>(nameof(Report));
@@ -504,7 +504,7 @@ public partial class GameCrashReportModal : Modal
             ["loader"] = Report?.LoaderLabel ?? "Unknown",
             ["mod_count"] = Report?.ModCount.ToString(CultureInfo.InvariantCulture) ?? "0",
             ["game_directory"] = EscapeMarkdownInline(Report?.GameDirectory),
-            ["polymerium_version"] = Program.Version,
+            ["qinmolauncher_version"] = Program.Version,
             ["build_configuration"] = Program.IsDebug ? "Debug" : "Release",
             ["ui_language"] = CultureInfo.CurrentUICulture.Name,
             ["operating_system"] = EscapeMarkdownInline(Report?.OperatingSystem),

@@ -6,16 +6,16 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <ApplicationIcon>Assets\Icon.App.ico</ApplicationIcon>
-        <AssemblyName>Polymerium</AssemblyName>
+        <AssemblyName>QinmoLauncher</AssemblyName>
         <LangVersion>preview</LangVersion>
 
         <!-- Windows -->
-        <Product>Polymerium</Product>
-        <Company>d3ara1n</Company>
-        <AssemblyTitle>Polymerium Minecraft Launcher</AssemblyTitle>
+        <Product>QinmoLauncher</Product>
+        <Company>Qinmo</Company>
+        <AssemblyTitle>QinmoLauncher Minecraft Launcher</AssemblyTitle>
         <!-- Nuget -->
-        <Title>Polymerium</Title>
-        <Authors>d3ara1n</Authors>
+        <Title>QinmoLauncher</Title>
+        <Authors>reqinme</Authors>
         <PackageProjectUrl>https://github.com/d3ara1n/Polymerium</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/d3ara1n/Polymerium/blob/main/LICENSE.txt</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/d3ara1n/Polymerium</RepositoryUrl>

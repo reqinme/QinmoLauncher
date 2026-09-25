@@ -42,7 +42,7 @@ public partial class MarketplacePortalPageModel(
                 return;
             }
 
-            if (query == "Polymerium")
+            if (query == "QinmoLauncher")
             {
                 overlayService.PopModal(new TrophyModal());
                 return;

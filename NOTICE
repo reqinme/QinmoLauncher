@@ -1,0 +1,52 @@
+QinmoLauncher
+Copyright (c) 2026 reqinme
+
+QinmoLauncher is a fork of Polymerium. It bundles third-party software whose
+licenses require the attributions below. The MIT License text that governs this
+project itself is in LICENSE.txt.
+
+==============================================================================
+1. Polymerium
+   Copyright (c) d3ara1n
+   MIT License
+   https://github.com/d3ara1n/Polymerium
+   This project is derived from Polymerium; substantial portions of the source
+   remain under the original copyright.
+
+==============================================================================
+2. Trident.Net (TridentCore)
+   MIT License
+   https://github.com/TridentCore/Trident.Net
+   Consumed as the git submodule at submodules/Trident.Net and built as part of
+   this solution. NOTE: the upstream LICENSE.txt still carries the unfilled
+   placeholder "Copyright (c) [year] [fullname]"; no copyright holder is
+   declared there by upstream.
+
+==============================================================================
+3. Huskui.Avalonia
+   MIT License
+   https://github.com/d3ara1n/Huskui.Avalonia
+   Consumed as a NuGet package (control library and theming).
+
+==============================================================================
+4. 阿里妈妈方圆体 (Alimama FangYuanTi)
+
+   版权所有：淘宝（中国）软件有限公司（阿里妈妈）
+
+   本产品内嵌使用阿里妈妈方圆体。依其法律声明，阿里妈妈授权个人、企业等用户
+   免费下载、安装、使用该字体，可基于合法目的用于商业或非商业用途以及嵌入式
+   使用；但该声明第 4 条第 4 项禁止"标注错误或不标注版权所有人阿里妈妈"，
+   故在此明确标注。
+
+   该字体的完整法律声明见：
+   src/Polymerium.Avalonia/Assets/Fonts/AlimamaFangYuanTi/LICENSE.txt
+
+   嵌入位置：AppBuilderExtensions.cs 通过 EmbeddedFontCollection 注册
+   avares://QinmoLauncher/Assets/Fonts/AlimamaFangYuanTi，并在
+   App.axaml / FontService.cs 中作为默认字体族使用。
+
+==============================================================================
+5. Minecraft
+
+   Minecraft is a trademark of Mojang Synergies AB. This project is not
+   affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.

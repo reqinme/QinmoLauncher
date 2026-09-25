@@ -12,7 +12,7 @@ using TridentCore.Core.Utilities;
 namespace Polymerium.Avalonia.Adapters;
 
 // NOTE: 读 Modrinth App 的 SQLite 元数据（app.db）。核心侧适配器基于 JSON，
-//  只有桌面层已依赖 SQLite，故此适配器作为 Polymerium 对 ILauncherAdapter 的增强放在这里。
+//  只有桌面层已依赖 SQLite，故此适配器作为 QinmoLauncher 对 ILauncherAdapter 的增强放在这里。
 public class ModrinthLauncherAdapter : ILauncherAdapter
 {
     private const string INSTANCE_DB = "app.db";

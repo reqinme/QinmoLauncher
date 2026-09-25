@@ -35,7 +35,7 @@ public partial class OobePrivilege : OobeStep
     /// <returns>True if symlink creation is allowed, false otherwise.</returns>
     private bool Check()
     {
-        // 检查能否在 ~/.trident/.polymerium 下创建指向 first_run 的符号链接。
+        // 检查能否在 ~/.trident/.qinmolauncher 下创建指向 first_run 的符号链接。
         var first = PathDef.Default.FileOfFirstRun();
         var symlink = PathDef.Default.FileOfSymlink();
 

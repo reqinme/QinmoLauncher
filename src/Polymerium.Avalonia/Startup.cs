@@ -260,7 +260,7 @@ public static class Startup
                 options.AddExceptionFilterForType<TaskCanceledException>();
                 options.SetBeforeSend(@event =>
                 {
-                    if (@event.Tags.TryGetValue("polymerium.source", out var source))
+                    if (@event.Tags.TryGetValue("qinmolauncher.source", out var source))
                     {
                         @event.SetFingerprint("{{ default }}", source);
                     }

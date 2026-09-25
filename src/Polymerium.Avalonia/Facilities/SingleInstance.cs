@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace Polymerium.Avalonia.Facilities;
 
 // Named-Mutex 单实例守卫——第二实例经单向命名管道 ping 第一实例；消息为单行 JSON，
-// 未来导航转发（polymerium://、args）只加字段、不动传输层。
+// 未来导航转发（qinmolauncher://、args）只加字段、不动传输层。
 internal sealed class SingleInstance : IDisposable
 {
-    private const string MUTEX_NAME = "dev.dearain.Polymerium.single-instance";
-    private const string PIPE_NAME = "dev.dearain.Polymerium.ipc";
+    private const string MUTEX_NAME = "dev.reqinme.QinmoLauncher.single-instance";
+    private const string PIPE_NAME = "dev.reqinme.QinmoLauncher.ipc";
 
     private readonly Mutex _mutex;
     private readonly bool _ownsMutex;

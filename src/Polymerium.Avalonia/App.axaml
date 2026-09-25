@@ -8,7 +8,7 @@
     <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
     <Application.Styles>
         <husk:HuskuiTheme />
-        <StyleInclude Source="avares://Polymerium/Themes/Bundle.axaml" />
+        <StyleInclude Source="avares://QinmoLauncher/Themes/Bundle.axaml" />
         <StyleInclude Source="avares://Huskui.Avalonia/Themes/Addons.InlineUIContainerAlignment.axaml" />
         <StyleInclude Source="avares://Huskui.Avalonia/Themes/Addons.NoAutoScrollToSelectedItem.axaml" />
         <!-- <Style Selector=":is(Control)"> -->
@@ -24,13 +24,13 @@
                 <ResourceDictionary x:Key="Light">
                     <ImageBrush
                         x:Key="SettingsImageBrush"
-                        Source="avares://Polymerium/Assets/Images/126997360_p2.jpg"
+                        Source="avares://QinmoLauncher/Assets/Images/126997360_p2.jpg"
                         Stretch="UniformToFill" />
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <ImageBrush
                         x:Key="SettingsImageBrush"
-                        Source="avares://Polymerium/Assets/Images/126997360_p0.jpg"
+                        Source="avares://QinmoLauncher/Assets/Images/126997360_p0.jpg"
                         Stretch="UniformToFill" />
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>

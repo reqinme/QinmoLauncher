@@ -6,37 +6,37 @@ namespace Polymerium.Avalonia.Assets;
 
 public static class AssetUriIndex
 {
-    public static readonly Uri Icon = new("avares://Polymerium/Assets/Icon.App.png", UriKind.Absolute);
+    public static readonly Uri Icon = new("avares://QinmoLauncher/Assets/Icon.App.png", UriKind.Absolute);
 
     public static readonly Uri RepositoryHeaderCurseforge =
-        new("avares://Polymerium/Assets/Images/Repositories/Header_CurseForge.png", UriKind.Absolute);
+        new("avares://QinmoLauncher/Assets/Images/Repositories/Header_CurseForge.png", UriKind.Absolute);
 
     public static readonly Uri RepositoryHeaderModrinth =
-        new("avares://Polymerium/Assets/Images/Repositories/Header_Modrinth.png", UriKind.Absolute);
+        new("avares://QinmoLauncher/Assets/Images/Repositories/Header_Modrinth.png", UriKind.Absolute);
 
     public static readonly Uri RepositoryHeaderFavorite =
-        new("avares://Polymerium/Assets/Images/Repositories/Header_Favorite.png", UriKind.Absolute);
+        new("avares://QinmoLauncher/Assets/Images/Repositories/Header_Favorite.png", UriKind.Absolute);
 
-    public static readonly Uri DirtImage = new("avares://Polymerium/Assets/Images/Placeholders/Dirt.png",
+    public static readonly Uri DirtImage = new("avares://QinmoLauncher/Assets/Images/Placeholders/Dirt.png",
                                                UriKind.Absolute);
 
-    public static readonly Uri SteveFaceImage = new("avares://Polymerium/Assets/Images/Placeholders/Steve_Face.png",
+    public static readonly Uri SteveFaceImage = new("avares://QinmoLauncher/Assets/Images/Placeholders/Steve_Face.png",
                                                     UriKind.Absolute);
 
     public static readonly Uri
-        WallpaperImage = new("avares://Polymerium/Assets/Images/Wallpaper.png", UriKind.Absolute);
+        WallpaperImage = new("avares://QinmoLauncher/Assets/Images/Wallpaper.png", UriKind.Absolute);
 
-    public static readonly Uri LoaderNeoforge = new("avares://Polymerium/Assets/Loaders/net.neoforged.png",
+    public static readonly Uri LoaderNeoforge = new("avares://QinmoLauncher/Assets/Loaders/net.neoforged.png",
                                                     UriKind.Absolute);
 
-    public static readonly Uri LoaderForge = new("avares://Polymerium/Assets/Loaders/net.minecraftforge.png",
+    public static readonly Uri LoaderForge = new("avares://QinmoLauncher/Assets/Loaders/net.minecraftforge.png",
                                                  UriKind.Absolute);
 
-    public static readonly Uri LoaderFabric = new("avares://Polymerium/Assets/Loaders/net.fabricmc.png",
+    public static readonly Uri LoaderFabric = new("avares://QinmoLauncher/Assets/Loaders/net.fabricmc.png",
                                                   UriKind.Absolute);
 
     public static readonly Uri
-        LoaderQuilt = new("avares://Polymerium/Assets/Loaders/org.quiltmc.png", UriKind.Absolute);
+        LoaderQuilt = new("avares://QinmoLauncher/Assets/Loaders/org.quiltmc.png", UriKind.Absolute);
 
     public static readonly Bitmap RepositoryHeaderCurseforgeBitmap = new(AssetLoader.Open(RepositoryHeaderCurseforge));
 

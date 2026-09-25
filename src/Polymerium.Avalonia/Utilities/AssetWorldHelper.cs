@@ -270,7 +270,7 @@ public static class AssetWorldHelper
     }
 
     /// <summary>
-    ///     解析存档中的玩家列表（只包含在 Polymerium 账号管理中的玩家）
+    ///     解析存档中的玩家列表（只包含在 QinmoLauncher 账号管理中的玩家）
     /// </summary>
     public static IReadOnlyList<AssetWorldPlayerModel> ParsePlayers(
         string worldPath,

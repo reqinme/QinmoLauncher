@@ -39,13 +39,13 @@ $IsCrossPlatform = $CurrentOS -ne $TargetOS
 
 # Determine executable name and icon based on target runtime
 if ($Rid -like "win-*") {
-    $ExeName = "Polymerium.exe"
+    $ExeName = "QinmoLauncher.exe"
     $IconPath = "./src/Polymerium.Avalonia/Assets/Icon.Installer.ico"
 } elseif ($Rid -like "osx-*") {
-    $ExeName = "Polymerium"
+    $ExeName = "QinmoLauncher"
     $IconPath = "./src/Polymerium.Avalonia/Assets/Icon.App.icns"
 } else {
-    $ExeName = "Polymerium"
+    $ExeName = "QinmoLauncher"
     $IconPath = "./src/Polymerium.Avalonia/Assets/Icon.App.png"
 }
 
@@ -98,17 +98,17 @@ Write-Host "Step 2: Packing with Velopack..."
 $VpkArgs = @(
     "pack",
     "--runtime", $Rid,
-    "--packId", "Polymerium",
+    "--packId", "QinmoLauncher",
     "--packVersion", $Version,
     "--packDir", $PackDir,
     "--releaseNotes", "README.md",
     "--mainExe", $ExeName,
     "--icon", $IconPath,
-    "--packAuthors", "d3ara1n"
+    "--packAuthors", "reqinme"
 )
 
 if ($Rid -like "osx-*") {
-    $VpkArgs += @("--bundleId", "dev.dearain.Polymerium")
+    $VpkArgs += @("--bundleId", "dev.reqinme.QinmoLauncher")
 }
 
 # For cross-platform packing, we need to use vpk [platform] pack syntax

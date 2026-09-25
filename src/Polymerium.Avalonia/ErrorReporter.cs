@@ -17,10 +17,10 @@ internal static class ErrorReporter
                                        {
                                            scope.Level = meta.Level;
                                            // 打标签便于 Sentry 搜索/筛选。
-                                           scope.SetTag("polymerium.source", meta.Source.ToString());
-                                           scope.SetTag("polymerium.phase", meta.Phase);
-                                           scope.SetTag("polymerium.critical", meta.Critical ? "true" : "false");
-                                           scope.SetTag("polymerium.likely_crash", meta.Terminating ? "true" : "false");
+                                           scope.SetTag("qinmolauncher.source", meta.Source.ToString());
+                                           scope.SetTag("qinmolauncher.phase", meta.Phase);
+                                           scope.SetTag("qinmolauncher.critical", meta.Critical ? "true" : "false");
+                                           scope.SetTag("qinmolauncher.likely_crash", meta.Terminating ? "true" : "false");
                                            scope.SetExtra("exception.type.full",
                                                           ex.GetType().FullName ?? ex.GetType().Name);
                                            scope.SetExtra("exception.message", ex.Message);
@@ -42,7 +42,7 @@ internal static class ErrorReporter
         var path = Path.Combine(AppContext.BaseDirectory, "dumps", $"Exception-{DateTimeOffset.Now.ToFileTime()}.log");
         var sb = new StringBuilder($"""
                                     // {DateTimeOffset.Now.ToString()}
-                                    // Polymerium: {typeof(Program).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                    // QinmoLauncher: {typeof(Program).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                                                   ?.InformationalVersion.Split('+')[0] ?? Program.Version}
                                     // Avalonia: {Assembly.GetEntryAssembly()?.GetName().Version}
 
