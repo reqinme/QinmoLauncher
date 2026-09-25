@@ -90,6 +90,10 @@ public partial class SettingsPageModel : ViewModelBase
         ProxyUsername = configurationService.Value.NetworkProxyUsername;
         ProxyPassword = configurationService.Value.NetworkProxyPassword;
 
+        DownloadMirrorEnabled = configurationService.Value.DownloadMirrorEnabled;
+        DownloadParallelism = configurationService.Value.DownloadParallelism;
+        DownloadAttemptTimeoutSeconds = configurationService.Value.DownloadAttemptTimeoutSeconds;
+
         MainFontSelection = _fontService.Main;
         CodeFontSelection = _fontService.Code;
         LogFontSelection = _fontService.Log;
@@ -655,6 +659,37 @@ public partial class SettingsPageModel : ViewModelBase
             ProxyUsername = newSettings.Username;
             ProxyPassword = newSettings.Password;
         }
+    }
+
+    #endregion
+
+    #region Download Policy Settings
+
+    [ObservableProperty]
+    public partial bool DownloadMirrorEnabled { get; set; }
+
+    partial void OnDownloadMirrorEnabledChanged(bool value)
+    {
+        _configurationService.Value.DownloadMirrorEnabled = value;
+        _configurationService.ApplyDownloadPolicy();
+    }
+
+    [ObservableProperty]
+    public partial uint DownloadParallelism { get; set; }
+
+    partial void OnDownloadParallelismChanged(uint value)
+    {
+        _configurationService.Value.DownloadParallelism = value;
+        _configurationService.ApplyDownloadPolicy();
+    }
+
+    [ObservableProperty]
+    public partial uint DownloadAttemptTimeoutSeconds { get; set; }
+
+    partial void OnDownloadAttemptTimeoutSecondsChanged(uint value)
+    {
+        _configurationService.Value.DownloadAttemptTimeoutSeconds = value;
+        _configurationService.ApplyDownloadPolicy();
     }
 
     #endregion

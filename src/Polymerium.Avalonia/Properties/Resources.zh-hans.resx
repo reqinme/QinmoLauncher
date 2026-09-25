@@ -4404,4 +4404,22 @@
     <data name="ChangelogView_CopyReference" xml:space="preserve">
         <value>复制引用</value>
     </data>
+    <data name="SettingsPage_DownloadMirrorLabelText" xml:space="preserve">
+      <value>通过国内镜像加速下载</value>
+    </data>
+    <data name="SettingsPage_DownloadMirrorDescription" xml:space="preserve">
+      <value>把游戏、加载器与资源下载改走 BMCLAPI，镜像失败时自动回退原站。实际速度取决于你的网络。</value>
+    </data>
+    <data name="SettingsPage_DownloadParallelismLabelText" xml:space="preserve">
+      <value>下载并发数</value>
+    </data>
+    <data name="SettingsPage_DownloadParallelismDescription" xml:space="preserve">
+      <value>同时进行的最大下载数。填 0 表示按 CPU 核心数自动决定。</value>
+    </data>
+    <data name="SettingsPage_DownloadAttemptTimeoutLabelText" xml:space="preserve">
+      <value>单次尝试超时（秒）</value>
+    </data>
+    <data name="SettingsPage_DownloadAttemptTimeoutDescription" xml:space="preserve">
+      <value>单次下载尝试允许的时长，超时后切换到下一个源。填 0 表示不额外限制。</value>
+    </data>
 </root>

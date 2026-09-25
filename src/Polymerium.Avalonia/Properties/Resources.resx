@@ -4413,4 +4413,22 @@ Affected entries: {0}
     <data name="ChangelogView_CopyReference" xml:space="preserve">
         <value>Copy reference</value>
     </data>
+    <data name="SettingsPage_DownloadMirrorLabelText" xml:space="preserve">
+      <value>Accelerate downloads through a domestic mirror</value>
+    </data>
+    <data name="SettingsPage_DownloadMirrorDescription" xml:space="preserve">
+      <value>Routes game, loader and asset downloads through BMCLAPI, falling back to the origin server when the mirror fails. Actual speed depends on your network.</value>
+    </data>
+    <data name="SettingsPage_DownloadParallelismLabelText" xml:space="preserve">
+      <value>Download concurrency</value>
+    </data>
+    <data name="SettingsPage_DownloadParallelismDescription" xml:space="preserve">
+      <value>Maximum number of simultaneous downloads. Leave 0 to size it from the CPU core count.</value>
+    </data>
+    <data name="SettingsPage_DownloadAttemptTimeoutLabelText" xml:space="preserve">
+      <value>Single attempt timeout (seconds)</value>
+    </data>
+    <data name="SettingsPage_DownloadAttemptTimeoutDescription" xml:space="preserve">
+      <value>How long one attempt may take before moving to the next source. Leave 0 for no extra limit.</value>
+    </data>
 </root>

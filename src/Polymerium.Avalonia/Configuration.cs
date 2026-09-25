@@ -38,6 +38,9 @@ public class Configuration
     public const string NETWORK_PROXY_PORT = "Network.Proxy.Port";
     public const string NETWORK_PROXY_USERNAME = "Network.Proxy.Username";
     public const string NETWORK_PROXY_PASSWORD = "Network.Proxy.Password";
+    public const string DOWNLOAD_MIRROR_ENABLED = "Download.Mirror.Enabled";
+    public const string DOWNLOAD_PARALLELISM = "Download.Parallelism";
+    public const string DOWNLOAD_ATTEMPT_TIMEOUT = "Download.AttemptTimeoutSeconds";
     public const string UPDATE_AUTO_CHECK = "Update.AutoCheck";
     public const string UPDATE_SOURCE = "Update.Source";
     public const string UPDATE_MIRRORCHYAN_CDK = "Update.MirrorChyan.Cdk";
@@ -80,7 +83,10 @@ public class Configuration
         { NETWORK_PROXY_PASSWORD, string.Empty },
         { UPDATE_AUTO_CHECK, !OperatingSystem.IsLinux() },
         { UPDATE_SOURCE, 0 },
-        { UPDATE_MIRRORCHYAN_CDK, string.Empty }
+        { UPDATE_MIRRORCHYAN_CDK, string.Empty },
+        { DOWNLOAD_MIRROR_ENABLED, false },
+        { DOWNLOAD_PARALLELISM, 0u },
+        { DOWNLOAD_ATTEMPT_TIMEOUT, 0u }
     };
 
     public static string[] SupportedLanguages { get; } = ["en-US", "zh-Hans"];
@@ -116,6 +122,10 @@ public class Configuration
     public uint NetworkProxyPort { get; set; } = AccessDefault<uint>(NETWORK_PROXY_PORT);
     public string NetworkProxyUsername { get; set; } = AccessDefault<string>(NETWORK_PROXY_USERNAME);
     public string NetworkProxyPassword { get; set; } = AccessDefault<string>(NETWORK_PROXY_PASSWORD);
+
+    public bool DownloadMirrorEnabled { get; set; } = AccessDefault<bool>(DOWNLOAD_MIRROR_ENABLED);
+    public uint DownloadParallelism { get; set; } = AccessDefault<uint>(DOWNLOAD_PARALLELISM);
+    public uint DownloadAttemptTimeoutSeconds { get; set; } = AccessDefault<uint>(DOWNLOAD_ATTEMPT_TIMEOUT);
     public bool UpdateAutoCheck { get; set; } = AccessDefault<bool>(UPDATE_AUTO_CHECK);
     public int UpdateSource { get; set; } = AccessDefault<int>(UPDATE_SOURCE);
     public string UpdateMirrorChyanCdk { get; set; } = AccessDefault<string>(UPDATE_MIRRORCHYAN_CDK);

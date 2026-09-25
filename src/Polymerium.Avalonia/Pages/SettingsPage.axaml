@@ -542,7 +542,30 @@
                             </Grid>
                         </Border>
                     </app:SettingsEntryItem>
-                </app:SettingsEntry>
+                    <app:SettingsEntryItem
+                        HorizontalContentAlignment="Right"
+                        Description="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_DownloadMirrorDescription}}"
+                        Header="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_DownloadMirrorLabelText}}">
+                        <ToggleSwitch IsChecked="{Binding DownloadMirrorEnabled, Mode=TwoWay}" />
+                    </app:SettingsEntryItem>
+                    <app:SettingsEntryItem
+                        Description="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_DownloadParallelismDescription}}"
+                        Header="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_DownloadParallelismLabelText}}">
+                        <TextBox
+                            Width="120"
+                            HorizontalAlignment="Right"
+                            PlaceholderText="0"
+                            Text="{Binding DownloadParallelism, Mode=TwoWay}" />
+                    </app:SettingsEntryItem>
+                    <app:SettingsEntryItem
+                        Description="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_DownloadAttemptTimeoutDescription}}"
+                        Header="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_DownloadAttemptTimeoutLabelText}}">
+                        <TextBox
+                            Width="120"
+                            HorizontalAlignment="Right"
+                            PlaceholderText="0"
+                            Text="{Binding DownloadAttemptTimeoutSeconds, Mode=TwoWay}" />
+                    </app:SettingsEntryItem>                </app:SettingsEntry>
                 <!--  Privacy  -->
                 <app:SettingsEntry
                     Title="{Translate {x:Static app:LanguageManager+Keys.SettingsPage_PrivacyTitle}}"

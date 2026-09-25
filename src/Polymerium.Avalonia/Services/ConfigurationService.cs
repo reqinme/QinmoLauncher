@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using Polymerium.Avalonia.Utilities;
 using TridentCore.Abstractions;
 
 namespace Polymerium.Avalonia.Services;
@@ -39,9 +40,15 @@ public sealed class ConfigurationService : IDisposable
         }
 
         Value = read ?? new Configuration();
+        ApplyDownloadPolicy();
     }
 
     public Configuration Value { get; }
+
+    public void ApplyDownloadPolicy() =>
+        DownloadPolicyEnvironmentHelper.Apply(Value.DownloadMirrorEnabled,
+                                              Value.DownloadParallelism,
+                                              Value.DownloadAttemptTimeoutSeconds);
 
     #region IDisposable Members
 
