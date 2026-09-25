@@ -54,6 +54,18 @@ internal static class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        // NOTE: Trident freezes its data root when PathDef is first touched, which the BrandNames line
+        //  below does, so this has to come first. Our own root keeps this launcher's instances and
+        //  cache out of the engine-wide directory that other Trident front ends write to on the same
+        //  machine. An explicitly configured TRIDENT_HOME still wins.
+        if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("TRIDENT_HOME")))
+        {
+            Environment.SetEnvironmentVariable("TRIDENT_HOME",
+                                                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                                                             Brand,
+                                                             "Trident"));
+        }
+
         VelopackApp.Build().OnFirstRun(_ => FirstRun = true).Run();
 
         #region 0. 这些设置需要在整个应用启动的第一时间完成
