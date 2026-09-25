@@ -38,3 +38,6 @@ foreach ($Satellite in $SatelliteSource)
 
 Write-Host "Publish completed successfully."
 
+# Release 发布会把 obj/project.assets.json 重写成不含 Debug 条件包的版本，
+# 导致下一次 Debug 构建报 CS1061（AppBuilder 缺 WithDeveloperTools）。发布后补一次默认还原。
+dotnet restore

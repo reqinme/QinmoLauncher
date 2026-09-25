@@ -1612,7 +1612,7 @@
         <value>部署 {0} 失败</value>
     </data>
     <data name="MainWindow_InstanceDeployingBuildArtifactConflictDangerNotificationMessage" xml:space="preserve">
-        <value>部署无法继续，因为运行目录（build）里已有 Polymerium 需要接管的文件。它们可能来自旧版本导入、手动修改，或上一次部署留下的工作副本。重置可以修复运行目录，但会永久删除其中的存档、游戏配置和其他数据。只有已经放入“本地保留”（persist）的数据会保留。</value>
+        <value>部署无法继续，因为运行目录（build）里已有 QinmoLauncher 需要接管的文件。它们可能来自旧版本导入、手动修改，或上一次部署留下的工作副本。重置可以修复运行目录，但会永久删除其中的存档、游戏配置和其他数据。只有已经放入“本地保留”（persist）的数据会保留。</value>
     </data>
     <data name="MainWindow_InstanceDeployingBuildArtifactConflictResetActionText" xml:space="preserve">
         <value>重置...</value>
@@ -2077,7 +2077,7 @@
         <value>作为资产文件</value>
     </data>
     <data name="AssetImporterDialog_AsAssetDescription" xml:space="preserve">
-        <value>抛弃 Polymerium 的文件管理机制，使用传统的 mod.jar 放入 mods 模式。</value>
+        <value>抛弃 QinmoLauncher 的文件管理机制，使用传统的 mod.jar 放入 mods 模式。</value>
     </data>
     <data name="AssetImporterDialog_AsAssetPrompt" xml:space="preserve">
         <value>保存在 persist 的文件会在重新部署后继续保留在当前实例中；若启用“随整合包导出”，文件会改存到 import，部署时进入游戏目录，并在导出整合包时一起打包。</value>
@@ -2500,7 +2500,7 @@
       <value>导出 AI 分析包</value>
   </data>
     <data name="GameCrashReportModal_AiExportConfirmBodyText" xml:space="preserve">
-      <value>崩溃报告和游戏日志将被上传到第三方日志分享服务 mclo.gs 以生成可分享的链接。随后 Polymerium 会保存一份 Markdown 文件，其中包含这些链接、日志摘录、启动命令行与环境信息。Polymerium 会在上传前向你确认，并在本地对访问令牌、UUID 与用户名脱敏。将文件内容粘贴到 AI 助手（Claude、ChatGPT 等）中即可进行引导式故障排查。上传的日志可通过其链接被公开访问，并由 mclo.gs 保留。</value>
+      <value>崩溃报告和游戏日志将被上传到第三方日志分享服务 mclo.gs 以生成可分享的链接。随后 QinmoLauncher 会保存一份 Markdown 文件，其中包含这些链接、日志摘录、启动命令行与环境信息。QinmoLauncher 会在上传前向你确认，并在本地对访问令牌、UUID 与用户名脱敏。将文件内容粘贴到 AI 助手（Claude、ChatGPT 等）中即可进行引导式故障排查。上传的日志可通过其链接被公开访问，并由 mclo.gs 保留。</value>
   </data>
     <data name="AppUpdateModal_Title" xml:space="preserve">
     <value>发现新版本</value>
@@ -2670,7 +2670,7 @@
     </data>
     <!-- OOBE Welcome Panel -->
     <data name="OobeWelcome_Title" xml:space="preserve">
-        <value>欢迎使用 Polymerium</value>
+        <value>欢迎使用 QinmoLauncher</value>
     </data>
     <data name="OobeWelcome_Subtitle" xml:space="preserve">
         <value>新一代 Minecraft 实例管理器</value>
@@ -2799,7 +2799,7 @@
         <value>获得了什么权限？</value>
     </data>
     <data name="OobePrivilege_GrantedWhatDescription" xml:space="preserve">
-        <value>来自 Windows 开发者模式的符号链接创建权限。这使得 Polymerium 可以创建文件链接而非复制文件，从而实现多个游戏实例之间的高效资源管理。</value>
+        <value>来自 Windows 开发者模式的符号链接创建权限。这使得 QinmoLauncher 可以创建文件链接而非复制文件，从而实现多个游戏实例之间的高效资源管理。</value>
     </data>
     <data name="OobePrivilege_GrantedBenefitsTitle" xml:space="preserve">
         <value>你将获得</value>
@@ -2815,7 +2815,7 @@
         <value>我们可能收集的信息</value>
     </data>
     <data name="OobePrivacy_WhatWeCollectDescription" xml:space="preserve">
-        <value>当 QinmoLauncher 遇到意外错误时，会在项目仓库的 GitHub Issue 中提交一份报告：异常类型、消息、堆栈，以及应用版本、操作系统、界面语言等运行环境信息。这些 Issue 是公开的，且提交前会把你的用户目录替换为 %USERPROFILE%。绝不包含账户凭据、游戏内容与机器名。</value>
+        <value>当 QinmoLauncher 遇到意外错误时，会在项目仓库的 GitHub Issue 中提交一份报告：异常类型、消息、堆栈，以及应用版本、操作系统、界面语言等运行环境信息。这些 Issue 是公开的，且提交前会把你的用户目录替换为 %USERPROFILE%。绝不包含账号凭据、游戏内容与机器名。</value>
     </data>
     <data name="OobePrivacy_OurPromiseTitle" xml:space="preserve">
         <value>我们的承诺</value>
@@ -2824,7 +2824,7 @@
         <value>不收集个人数据</value>
     </data>
     <data name="OobePrivacy_Promise1Description" xml:space="preserve">
-        <value>我们绝不会收集您的个人信息、账户凭据或游戏内容。</value>
+        <value>我们绝不会收集您的个人信息、账号凭据或游戏内容。</value>
     </data>
     <data name="OobePrivacy_Promise2Title" xml:space="preserve">
         <value>本地优先</value>
@@ -3796,7 +3796,7 @@
         <value>此服务器地址未加密（HTTP），你的用户名、密码和登录令牌将以明文传输，可能被第三方截获。请确认你了解此风险后再继续。</value>
     </data>
     <data name="App_ExitConfirmTitle" xml:space="preserve">
-        <value>退出 Polymerium？</value>
+        <value>退出 QinmoLauncher？</value>
     </data>
     <data name="App_ExitConfirmTaskMessage" xml:space="preserve">
         <value>{0} 个实例正在部署、安装或更新，退出将中断这些任务。</value>
@@ -3805,7 +3805,7 @@
         <value>{0} 个实例正在运行游戏，退出启动器后游戏进程将继续运行。</value>
     </data>
     <data name="AppMenu_AboutText" xml:space="preserve">
-        <value>关于 Polymerium</value>
+        <value>关于 QinmoLauncher</value>
     </data>
     <data name="AppMenu_SettingsText" xml:space="preserve">
         <value>设置…</value>
@@ -3826,7 +3826,7 @@
         <value>集市</value>
     </data>
     <data name="AppMenu_AccountsText" xml:space="preserve">
-        <value>账户管理</value>
+        <value>账号管理</value>
     </data>
     <data name="AppMenu_StorageText" xml:space="preserve">
         <value>存储管理</value>

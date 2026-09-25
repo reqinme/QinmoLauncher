@@ -1621,7 +1621,7 @@
         <value>Failed to deploy {0}</value>
     </data>
     <data name="MainWindow_InstanceDeployingBuildArtifactConflictDangerNotificationMessage" xml:space="preserve">
-        <value>Deployment cannot continue because the run directory (build) contains files Polymerium needs to manage. They may come from an older import, manual changes, or a working copy left by a previous deployment. Resetting can repair the run directory, but it permanently deletes saves, game configuration, and other data stored there. Only data already placed in Local Data (persist) is preserved.</value>
+        <value>Deployment cannot continue because the run directory (build) contains files QinmoLauncher needs to manage. They may come from an older import, manual changes, or a working copy left by a previous deployment. Resetting can repair the run directory, but it permanently deletes saves, game configuration, and other data stored there. Only data already placed in Local Data (persist) is preserved.</value>
     </data>
     <data name="MainWindow_InstanceDeployingBuildArtifactConflictResetActionText" xml:space="preserve">
         <value>Reset...</value>
@@ -2086,7 +2086,7 @@
         <value>As asset file</value>
     </data>
     <data name="AssetImporterDialog_AsAssetDescription" xml:space="preserve">
-        <value>Falls back to traditional mod.jar placement, losing Polymerium's file management benefits.</value>
+        <value>Falls back to traditional mod.jar placement, losing QinmoLauncher's file management benefits.</value>
     </data>
     <data name="AssetImporterDialog_AsAssetPrompt" xml:space="preserve">
         <value>Files stored in persist stay local across redeploys. If "Export with modpack" is enabled, the file is stored in import instead, included in the game directory on deploy, and bundled when exporting a modpack.</value>
@@ -2512,7 +2512,7 @@
       <value>Export AI Analysis Package</value>
   </data>
     <data name="GameCrashReportModal_AiExportConfirmBodyText" xml:space="preserve">
-      <value>Your crash report and game log will be uploaded to mclo.gs, a third-party log-sharing service, to generate shareable links. Polymerium will then save a Markdown file with those links, a log excerpt, the launch command line, and environment information. Polymerium confirms with you before uploading and redacts access tokens, UUIDs, and usernames locally. Paste the file into an AI assistant (Claude, ChatGPT, etc.) for guided troubleshooting. The uploaded logs are publicly accessible via their links and retained by mclo.gs.</value>
+      <value>Your crash report and game log will be uploaded to mclo.gs, a third-party log-sharing service, to generate shareable links. QinmoLauncher will then save a Markdown file with those links, a log excerpt, the launch command line, and environment information. QinmoLauncher confirms with you before uploading and redacts access tokens, UUIDs, and usernames locally. Paste the file into an AI assistant (Claude, ChatGPT, etc.) for guided troubleshooting. The uploaded logs are publicly accessible via their links and retained by mclo.gs.</value>
   </data>
     <data name="AppUpdateModal_Title" xml:space="preserve">
     <value>Update Available</value>
@@ -2682,7 +2682,7 @@
     </data>
     <!-- OOBE Welcome Panel -->
     <data name="OobeWelcome_Title" xml:space="preserve">
-        <value>Welcome to Polymerium</value>
+        <value>Welcome to QinmoLauncher</value>
     </data>
     <data name="OobeWelcome_Subtitle" xml:space="preserve">
         <value>A next-generation Minecraft instance manager</value>
@@ -2811,7 +2811,7 @@
         <value>What Permission Was Granted?</value>
     </data>
     <data name="OobePrivilege_GrantedWhatDescription" xml:space="preserve">
-        <value>Symbolic Link Creation privilege from Windows Developer Mode. This allows Polymerium to create file links instead of copying files, enabling efficient resource management across multiple game instances.</value>
+        <value>Symbolic Link Creation privilege from Windows Developer Mode. This allows QinmoLauncher to create file links instead of copying files, enabling efficient resource management across multiple game instances.</value>
     </data>
     <data name="OobePrivilege_GrantedBenefitsTitle" xml:space="preserve">
         <value>What You Get</value>
@@ -3805,7 +3805,7 @@ Affected entries: {0}
         <value>This server address is not encrypted (HTTP). Your username, password, and session tokens will be transmitted in plaintext and may be intercepted. Proceed only if you accept this risk.</value>
     </data>
     <data name="App_ExitConfirmTitle" xml:space="preserve">
-        <value>Exit Polymerium?</value>
+        <value>Exit QinmoLauncher?</value>
     </data>
     <data name="App_ExitConfirmTaskMessage" xml:space="preserve">
         <value>{0} instance(s) are deploying, installing, or updating, and exiting will interrupt them.</value>
@@ -3814,7 +3814,7 @@ Affected entries: {0}
         <value>{0} instance(s) are running games, and the game processes will keep running after the launcher exits.</value>
     </data>
     <data name="AppMenu_AboutText" xml:space="preserve">
-        <value>About Polymerium</value>
+        <value>About QinmoLauncher</value>
     </data>
     <data name="AppMenu_SettingsText" xml:space="preserve">
         <value>Settings…</value>
