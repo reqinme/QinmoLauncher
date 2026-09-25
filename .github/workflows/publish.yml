@@ -20,10 +20,6 @@ jobs:
                 include:
                     - os: windows-latest
                       runtime: win-x64
-                    - os: ubuntu-latest
-                      runtime: linux-x64
-                    - os: macos-latest
-                      runtime: osx-arm64
         runs-on: ${{ matrix.os }}
 
         steps:
