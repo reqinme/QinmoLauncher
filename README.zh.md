@@ -1,314 +1,114 @@
-﻿<a href="https://polymerium.dearain.dev">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/banner-dark.zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/brand/banner-light.zh.svg">
-    <img alt="Polymerium" src="assets/brand/banner-light.zh.svg">
-  </picture>
-</a>
-
 <div align="center">
 
-**一个 Minecraft 实例管理器，源于一个简单的理念。**
+# QinmoLauncher
+
+**基于 Trident 核心的 Windows 桌面 Minecraft 启动器。**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![.NET 10.0](https://img.shields.io/badge/.NET-10-5C2D91?style=for-the-badge&logoColor=white)](https://dotnet.microsoft.com/)
-[![Avalonia](https://img.shields.io/badge/Avalonia-12-3355FF?style=for-the-badge&logoColor=white)](https://avaloniaui.net/)
-[![C#](https://img.shields.io/badge/C%23-14-239120?style=for-the-badge&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
-[![zread](https://img.shields.io/badge/Ask_Zread-_.svg?style=for-the-badge&color=00b0aa&labelColor=000000&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTYxNTYgMS42MDAxSDIuMjQxNTZDMS44ODgxIDEuNjAwMSAxLjYwMTU2IDEuODg2NjQgMS42MDE1NiAyLjI0MDFWNC45NjAxQzEuNjAxNTYgNS4zMTM1NiAxLjg4ODEgNS42MDAxIDIuMjQxNTYgNS42MDAxSDQuOTYxNTZDNS4zMTUwMiA1LjYwMDEgNS42MDE1NiA1LjMxMzU2IDUuNjAxNTYgNC45NjAxVjIuMjQwMUM1LjYwMTU2IDEuODg2NjQgNS4zMTUwMiAxLjYwMDEgNC45NjE1NiAxLjYwMDFaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00Ljk2MTU2IDEwLjM5OTlIMi4yNDE1NkMxLjg4ODEgMTAuMzk5OSAxLjYwMTU2IDEwLjY4NjQgMS42MDE1NiAxMS4wMzk5VjEzLjc1OTlDMS42MDE1NiAxNC4xMTM0IDEuODg4MSAxNC4zOTk5IDIuMjQxNTYgMTQuMzk5OUg0Ljk2MTU2QzUuMzE1MDIgMTQuMzk5OSA1LjYwMTU2IDE0LjExMzQgNS42MDE1NiAxMy43NTk5VjExLjAzOTlDNS42MDE1NiAxMC42ODY0IDUuMzE1MDIgMTAuMzk5OSA0Ljk2MTU2IDEwLjM5OTlaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik0xMy43NTg0IDEuNjAwMUgxMS4wMzg0QzEwLjY4NSAxLjYwMDEgMTAuMzk4NCAxLjg4NjY0IDEwLjM5ODQgMi4yNDAxVjQuOTYwMUMxMC4zOTg0IDUuMzEzNTYgMTAuNjg1IDUuNjAwMSAxMS4wMzg0IDUuNjAwMUgxMy43NTg0QzE0LjExMTkgNS42MDAxIDE0LjM5ODQgNS4zMTM1NiAxNC4zOTg0IDQuOTYwMVYyLjI0MDFDMTQuMzk4NCAxLjg4NjY0IDE0LjExMTkgMS42MDAxIDEzLjc1ODQgMS42MDAxWiIgZmlsbD0iI2ZmZiIvPgo8cGF0aCBkPSJNNCAxMkwxMiA0TDQgMTJaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00IDEyTDEyIDQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff)](https://zread.ai/d3ara1n/Polymerium)
+[![.NET 10](https://img.shields.io/badge/.NET-10-5C2D91?style=for-the-badge)](https://dotnet.microsoft.com/)
+[![Avalonia](https://img.shields.io/badge/Avalonia-12-3355FF?style=for-the-badge)](https://avaloniaui.net/)
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8516e3e1a3994d138a1adc537d7c6ecd)](https://app.codacy.com/gh/d3ara1n/Polymerium/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-[![CodeFactor](https://www.codefactor.io/repository/github/d3ara1n/polymerium/badge)](https://www.codefactor.io/repository/github/d3ara1n/polymerium)
-
-[🌐 English](https://github.com/d3ara1n/Polymerium/blob/main/README.md) • [📥 下载](https://github.com/d3ara1n/Polymerium/releases) • [📖 文档](https://polymerium.dearain.dev) • [🐛 报告问题](https://github.com/d3ara1n/Polymerium/issues) • [💡 功能建议](https://github.com/d3ara1n/Polymerium/issues)
+[English](README.md) • [发布版本](https://github.com/reqinme/QinmoLauncher/releases) • [报告问题](https://github.com/reqinme/QinmoLauncher/issues)
 
 </div>
 
 ---
 
-## 实际效果
+## 这是什么
 
-<div align="center">
+QinmoLauncher 是一个**仅面向 Windows** 的桌面启动器：支持全部 Minecraft 版本及配套的模组加载器，支持微软账号与离线账号，每个实例拥有独立的、互不干扰的工作区。
 
-[![Screenshot](assets/screenshots/overview.avif)](#实际效果)
+它是 [Polymerium](https://github.com/d3ara1n/Polymerium) 的改名分支。界面、主题与引擎都来自 Polymerium 的工作；本分支保留这套基础，只改动下面列出的几件事。署名见 [NOTICE](NOTICE)。
 
-*从打开应用到启动游戏。*
+引擎是 **Trident**（[submodules/Trident.Net](submodules/Trident.Net)）——一套声明式的实例工具链，同时也驱动独立的 `trident` 命令行与 MCP 服务器。启动器是这套引擎之上的一层外壳：它调用同一批管理器、读取同一份 `profile.json`、写出同一套磁盘布局。
 
-</div>
+## 本分支改了什么
 
----
+- **无需开发者模式即可部署。** Trident 把实例的 `build/` 目录表达为指向共享缓存的链接，而创建符号链接需要普通 Windows 用户并不持有的特权，过去会直接导致部署失败。本分支回退到硬链接与 junction，因此常规安装即可正常工作。
+- **下载源可配置。** 可选的镜像源并自动回退到原始源，并行度与请求超时也可调。
+- **崩溃上报走 GitHub Issue。** 不接入任何第三方崩溃服务，也没有遥测。所谓上报就是一个预填好的 Issue 链接，由你决定是否打开，绝不是后台悄悄上传。
+- **中文界面真的显示中文。** 启动时会拿语言设置去匹配实际提供的资源集，`zh-CN` 的 Windows 不会再静默回退成英文。
+- **实例数据待在自己的目录里**，不再与其他 Trident 前端共用的引擎级目录混在一起。见 [数据位置](#数据位置)。
+- **部署失败会说清原因。** 一批操作失败时会逐项给出原因，而不是只报一个数量。
 
-## 不同之处
+## 环境要求
 
-> Polymerium 里的实例是一份描述，不是一堆复制的文件。
+- Windows 10 或 11，x64
+- 不需要开发者模式，不需要符号链接特权，不需要管理员权限
 
-换加载器、增删模组、更新整个整合包——改的是这份描述，Polymerium 按需重建文件，你的存档和设置原封不动。
+## 安装
 
-- **换加载器不用重来。** Forge 到 NeoForge、Fabric 到 Quilt——改个加载器，重新部署，模组全保留。
-- **原地更新整合包。** 导入新版本，你的世界和设置照旧。
-- **随时回滚。** 每次改动都能快照。改炸了？一键还原，还能看到具体动了什么。
+发布版本由 CI 在推送 `v*` 标签时构建。在第一个正式发布之前，请从源码构建：
 
-文件是链接的，不是复制的——十个整合包共用同一批模组，不会占十倍的磁盘。整套配置就一个小文件，可以用 Git 管版本、可以分享、可以搬走。
-
----
-
-## 功能
-
-<div align="center">
-<table>
-  <tr>
-    <td width="55%" valign="top">
-      <b>一目了然</b><br><br>
-      你的所有实例、账户、最近玩过的世界都在一处。接着上次的地方继续，或者开个新的。
-    </td>
-    <td width="45%">
-      <img src="assets/screenshots/landing.png" alt="首页仪表盘">
-    </td>
-  </tr>
-  <tr>
-    <td width="45%">
-      <img src="assets/screenshots/instance.png" alt="实例主页与启动面板">
-    </td>
-    <td width="55%" valign="top">
-      <b>部署即启动</b><br><br>
-      选个实例，按下启动。Polymerium 一步把配置变成正在运行的游戏——不用手动折腾文件，切换到另一个实例也是瞬间的事。
-    </td>
-  </tr>
-  <tr>
-    <td width="55%" valign="top">
-      <b>管的是模组，不是文件</b><br><br>
-      像浏览列表条目一样浏览、筛选、启用、更新模组——而不是对付一个文件夹里的文件。列表和网格视图随意切，按来源或类型筛选，更新单个模组或整个整合包。
-    </td>
-    <td width="45%">
-      <img src="assets/screenshots/setup.png" alt="模组管理">
-    </td>
-  </tr>
-  <tr>
-    <td width="45%">
-      <img src="assets/screenshots/graph.png" alt="依赖关系图">
-    </td>
-    <td width="55%" valign="top">
-      <b>看懂完整的依赖关系</b><br><br>
-      每个模组、每一层依赖，可视化铺开。在按下启动之前就能发现冲突和缺失。
-    </td>
-  </tr>
-  <tr>
-    <td width="55%" valign="top">
-      <b>从大型市场直接安装</b><br><br>
-      CurseForge 和 Modrinth，内置。按游戏版本和加载器搜索筛选，不用离开应用就装进实例。
-    </td>
-    <td width="45%">
-      <img src="assets/screenshots/marketplace.png" alt="市场搜索">
-    </td>
-  </tr>
-</table>
-</div>
-
-### 还有更多
-
-- **快照** —— 保存和恢复完整的游戏状态，带差异视图。
-- **Git 友好的整合包** —— 实例就是个配置文件，可以用 Git 管版本、协作开发。
-- **跨平台** —— Windows、Linux、macOS（Apple Silicon）同一套代码。
-- **干净卸载** —— 删两个文件夹，Polymerium 彻底消失。
-
----
-
-## 开始使用
-
-### 安装
-
-> [!NOTE]
-> Polymerium 正在积极开发中，功能和界面可能随版本调整。
-
-**Microsoft OAuth · 开源 MIT · 凭据只存本地。**
-
-下载前请先查看对应平台的注意事项：
-
-<details>
-<summary>🪟 <strong>Windows</strong> — 启用开发者模式（符号链接所需）</summary>
-
-Polymerium 使用[符号链接](https://www.wikiwand.com/en/Symbolic_link)进行高效的文件管理。启用开发者模式以允许在没有管理员权限的情况下创建符号链接。
-
-**Windows 11**
-
-```sh
-设置 → 系统 → 开发者选项 → 开发者模式
+```powershell
+git clone --recurse-submodules https://github.com/reqinme/QinmoLauncher.git
+cd QinmoLauncher
+dotnet restore
+dotnet build "Polymerium.slnx"
 ```
 
-**Windows 10**
+然后运行：
 
-```sh
-设置 → 更新和安全 → 开发者选项 → 开发者模式
+```powershell
+.\src\Polymerium.Avalonia\bin\Debug\net10.0\QinmoLauncher.exe
 ```
 
-**Windows 7/8**
+.NET 10 SDK 版本由 `global.json` 锁定（当前为 `10.0.401`）。
 
-```sh
-请先升级到 Windows 10+ 😉
+## 数据位置
+
+本启动器自己的东西全部集中在一个目录里，并且**刻意与其他 Trident 前端共用的引擎级目录分开**：
+
+| 内容 | 位置 |
+|---|---|
+| 数据根目录 | `%LOCALAPPDATA%\QinmoLauncher\Trident` |
+| 实例 | `<根>\instances\<标识>\` |
+| 共享缓存（资源、库、运行时、包） | `<根>\cache\` |
+| 设置、账号、HTTP 缓存、崩溃报告 | `<根>\.qinmolauncher\` |
+| 随附命令行使用的账号 | `<根>\.trident.cli\` |
+
+如果外部显式设置了 `TRIDENT_HOME`，它会覆盖上表的根目录，以上内容随之整体迁移到该路径下。手动运行随附的 `trident` 命令行时需要注意：**命令行不会套用启动器的默认值**，所以要指向同一个根目录，否则它报告的是引擎级实例库：
+
+```powershell
+$env:TRIDENT_HOME = "$env:LOCALAPPDATA\QinmoLauncher\Trident"
 ```
-
-</details>
-
-<details>
-<summary>🍎 <strong>macOS</strong> — 「安装包已损坏」处理方法</summary>
-
-由于 PKG 安装包未经 Apple 开发者证书签名，macOS Gatekeeper 可能会阻止安装并提示「安装包已损坏」。
-
-1. 右键点击 `.pkg` 文件，选择 **打开**。
-2. 如果仍然无法打开，在终端中移除隔离标记：
-
-   ```bash
-   xattr -d com.apple.quarantine Polymerium-osx-arm64-Setup.pkg
-   ```
-
-3. 再次打开 `.pkg` 文件，按照安装向导操作即可。
-
-</details>
-
-<details>
-<summary>🐧 <strong>Linux</strong> —— 需要 glibc 2.34 或更新版本</summary>
-
-内置的 SQLite 原生库依赖 **glibc 2.34+**。在较旧的发行版（Ubuntu 20.04、Debian 11 及 Zorin OS 16、Pop!_OS 20.04、Linux Mint 20 等衍生版）上，应用会启动失败并报 `DllNotFoundException: e_sqlite3`。
-
-查看当前 glibc 版本：
-
-```bash
-ldd --version
-```
-
-请使用 Ubuntu 22.04+、Debian 12+ 或其他 glibc ≥ 2.34 的发行版。
-
-</details>
-
-| 平台                | 包类型     | 直达下载                                                                                        |
-|---------------------|------------|-------------------------------------------------------------------------------------------------|
-| Windows x64         | 安装器     | [下载](https://github.com/d3ara1n/Polymerium/releases/latest/download/Polymerium-win-Setup.exe) |
-| Linux x64           | AppImage   | [下载](https://github.com/d3ara1n/Polymerium/releases/latest/download/Polymerium.AvaloniaImage) |
-| macOS Apple Silicon | PKG 安装器 | [下载](https://github.com/d3ara1n/Polymerium/releases/latest/download/Polymerium-osx-Setup.pkg) |
-
-[已有 Mirror酱 CDK？前往 Mirror酱 高速下载](https://mirrorchyan.com/zh/projects?rid=Polymerium&channel=Polymerium_setup&source=github-readme)
-
-1. **下载** 对应平台的安装包
-2. **运行** 安装器或可执行文件
-3. **按照** 向导完成初始配置
-
-### 快速开始
-
-1. **创建实例** —— 选个 Minecraft 版本和模组加载器
-2. **添加内容** —— 从 CurseForge 或 Modrinth 装模组
-3. **部署** —— Polymerium 构建游戏文件
-4. **游戏** —— 直接启动，或导出成整合包
-
----
 
 ## 架构
 
-| 技术            | 用途                   | 集成     |
-|-----------------|------------------------|----------|
-| **.NET 10**     | 带 C# 预览功能的运行时 | 核心平台 |
-| **Avalonia 12** | 跨平台 XAML UI 框架    | 表示层   |
-| **MVVM**        | 关注点分离             | 架构模式 |
-| **依赖注入**    | 模块化、可测试的服务   | 服务管理 |
-| **响应式扩展**  | 响应式数据流           | 数据流   |
+Trident 核心之上的一层薄 Avalonia 外壳。外壳负责 MVVM 的页面/对话框/模态/吐司体验、主题、本地持久化与自动更新；它**不**重新实现实例管理、部署、仓库、账号或导入导出——那些属于核心。
+
+实例是**声明式**的。`profile.json` 声明这个实例应该是什​​么样——游戏版本、加载器、包、规则——分阶段的部署流水线再把它变成可运行目录：
+
+```
+instances/<标识>/
+  profile.json    声明
+  import/         整合包源文件（真实复制）
+  persist/        重新部署后依然保留的本地数据
+  build/          可运行目录，链接进 cache/ 与 persist/
+  snapshots/      快照
+```
+
+`build/` 里大多是链接而非副本，这让实例的创建与重建都很轻。由于声明是唯一真相，实例随时可以从 `profile.json` 重建。
 
 ### 项目结构
 
-```sh
-Polymerium/
-├── src/            # 应用源码
-├── submodules/     # 引入的外部项目源码
-├── notes/          # 内部笔记
-├── changelogs/     # 版本更新日志
-├── scripts/        # 构建与发布脚本
-├── assets/         # 截图与素材
-└── plans/          # 规划文档
 ```
-
----
+src/Polymerium.Avalonia/    桌面外壳
+submodules/Trident.Net/     引擎：Abstractions <- Pref <- Core <- Cli
+```
 
 ## 平台支持
 
-| 平台                                                                                                       | 状态        |
-|------------------------------------------------------------------------------------------------------------|-------------|
-| ![Windows](https://img.shields.io/badge/Windows-10+-0078D6?style=flat-square&logo=windows&logoColor=white) | ✅ **稳定** |
-| ![Linux](https://img.shields.io/badge/Linux-AppImage-FCC624?style=flat-square&logo=linux&logoColor=black)  | ✅ **稳定** |
-| ![macOS](https://img.shields.io/badge/macOS-ARM64-000000?style=flat-square&logo=apple&logoColor=white)     | ✅ **稳定** |
+**仅 Windows x64。** 本分支只在 Windows 上构建与测试。上游项目同时提供 Linux 与 macOS 构建，本分支不提供。
 
----
+## 隐私
 
-## 已知问题
+没有遥测，没有统计，没有第三方崩溃上报。
 
-这些是 Avalonia 上游框架的局限，Polymerium 层面无法解决。
+当启动器捕获到未处理错误时，它可以整理一份报告。**除非你自己打开那个预填好的 GitHub Issue**，否则什么都不会被发送；而且发送前内容完全由你过目。
 
-### 渲染
+## 许可
 
-- **渐变色带** —— Avalonia 的画刷渐变渲染在某些渐变过渡中会产生明显的色阶跳变。问题根源在框架的渐变着色器，影响所有 Avalonia 应用，并非 Polymerium 独有。
+MIT，见 [LICENSE.txt](LICENSE.txt)。
 
-### 窗口外观
-
-- **macOS 与 Linux 上自定义标题栏支持有限** —— Avalonia 对自定义标题栏的支持在 macOS 和 Linux 上较为有限。自绘标题栏存在布局瑕疵与风格不一致，偏离平台惯例，按钮位置和观感相比 Windows 更为粗糙。
-
-### 弹出层
-
-- **macOS 上阴影渲染不佳** —— Avalonia 在 macOS 上的 Tooltip 和 Flyout 弹出层无法以真正透明的背景渲染，破坏了平台原生的投影效果，呈现出生硬的方框轮廓，而不是 macOS 上应有的柔和阴影。
-
----
-
-## 隐私与安全
-
-Polymerium 尊重您的隐私：
-
-- **可选崩溃报告**：发送匿名崩溃数据以帮助修复问题，可随时关闭
-- **本地存储**：所有数据都保留在您的机器上
-- **最小占用**：干净卸载不留痕迹
-- **开源**：透明、可审计的代码库
-
----
-
-## 关于 AI 辅助开发
-
-2026 年之前，Polymerium 的基础库、控件库与桌面应用全部由人工花费数年编写，代码库中不含任何一行 AI 生成的代码。
-
-随着今年几款前沿编码模型问世，AI Agent 开始能够勉强参与项目的构建工作。但实践中发现，当前 LLM 在软件工程素养和领域特定知识（尤其是
-Avalonia）上存在致命短板，产出的代码问题较为明显，必须经过人工排查和修复。
-
-尽管有上述局限，Agent 的辅助仍显著加快了开发节奏：原本耗时一个月的任务，现在基本能在一周内交付。工作方式依旧保持不变——AI
-负责提出方案并完成劳动密集的初步实现，由人工审阅、修正并完成剩余部分，确保代码方向不偏离预定轨道。
-
----
-
-## 许可证
-
-本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
-
----
-
-## 项目统计
-
-[![Star History Chart](https://api.star-history.com/svg?repos=d3ara1n/Polymerium&type=Date)](https://www.star-history.com/#d3ara1n/Polymerium&Date)
-
-![Repobeats Analytics](https://repobeats.axiom.co/api/embed/594b206d199e6aae83226e6b7b834f6896322858.svg "Repobeats analytics image")
-
-## 参考资料
-
-### 技术参考
-
-- [Inside a Minecraft Launcher](https://ryanccn.dev/posts/inside-a-minecraft-launcher) - 游戏启动过程和 Fabric/Quilt 部署
-- [Tutorial: Writing a Launcher](https://minecraft.fandom.com/zh/wiki/%E6%95%99%E7%A8%8B/%E7%BC%96%E5%86%99%E5%90%AF%E5%8A%A8%E5%99%A8) -
-  游戏启动过程指南
-- [ForgeWrapper](https://github.com/ZekerZhayard/ForgeWrapper) - Forge 集成参考
-- [Microsoft Authentication Scheme](https://wiki.vg/Microsoft_Authentication_Scheme) - 身份验证实现
-
-### 特别感谢
-
-- **Minecraft 社区** - 为了令人难以置信的模组生态系统
-- **Avalonia 团队** - 为了出色的跨平台 UI 框架
-- **API 提供商** - CurseForge 和 Modrinth 提供的公共 API
-- **贡献者** - 每一个帮助 Polymerium 变得更好的人
-
----
-
-<div align="center">
-
-Polymerium —— 把实例当成一份配置，而不是一堆复制的文件。
-
-</div>
+本项目派生自 Polymerium（Copyright (c) d3ara1n），并以子模块形式使用 Trident.Net。两者均为 MIT 许可，所需的署名在 [NOTICE](NOTICE) 中。
