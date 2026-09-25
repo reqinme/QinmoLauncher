@@ -385,6 +385,3 @@ publish/
 .DS_Store
 .codegraph/
 .agents/
-website/node_modules
-website/.next
-website/out

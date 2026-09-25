@@ -6,7 +6,7 @@
 - `src/Polymerium.Avalonia` is the only app in this repo.
 - `submodules/Trident.Net` is a git submodule and is part of the solution build. Treat it as an integral part of this project: it participates in the same development workflow and should be edited freely alongside the main codebase. Do not treat submodule changes as out-of-scope — feel free to modify files under `submodules/Trident.Net` when the task requires it. `Huskui.Avalonia` is consumed as a NuGet package, not a submodule.
 - Fresh clones need submodules initialized: `git submodule update --init --recursive`.
-- `plans/` holds task plans — intent-only starting prompts, not maintained design docs. Read `plans/README.md` before writing one. Treat `plans/archived/` as a graveyard (no reference value, do not read).
+- `plans/` holds task plans — intent-only starting prompts, not maintained design docs. Read `plans/README.md` before writing one. Archived plans were removed from the tree in the P0-3 slimming pass.
 - `GLOSSARY.md` defines canonical user-facing Polymerium terminology. Follow it when writing app strings, docs, changelog entries, issue text, or support messages.
 
 @GLOSSARY.md
@@ -19,16 +19,6 @@ This repo bundles two layers in one solution; knowing which is the core shapes e
 - **Polymerium** (`src/Polymerium.Avalonia`) is the **desktop shell** over Core — a peer to the `trident` CLI, not a re-implementation of Trident's logic. `Polymerium.Avalonia.csproj` references only `TridentCore.Core`, and `Startup.cs` re-registers the exact same Trident services and managers the CLI registers. Because Polymerium and the CLI wrap the same Core — same `profile.json`, same `.trident` data layout, same managers — an instance created or managed by one is directly readable and operable by the other; Polymerium is not a competing instance format, it is the desktop presentation of a Trident instance. Polymerium does **not** re-implement instance management, deployment, repositories, accounts, or import/export — it drives Trident's managers and layers a stylized desktop experience on top: the MVVM page/dialog/modal/toast UI, Huskui theming, local persistence (FreeSql), self-update (Velopack), crash reporting (GitHub Issues), and HTTP caching.
 
 Rule of thumb: when a behavior spans both layers, the real logic almost certainly belongs in Trident, with Polymerium adapting to the new surface — not the other way around.
-
-## Documentation Website
-
-- The project's public-facing docs site lives at `website/` — a Next.js app built with [Fumadocs](https://fumadocs.dev).
-- Deployed on Vercel at **polymerium.dearain.dev**.
-- Content is written in MDX under `website/content/docs/`, organized into sections: `getting-started`, `concepts`, `managing`, `advanced`, `guides`, `comparisons`.
-- Every `.mdx` page has a Chinese counterpart (`.zh.mdx`). When editing content, update both files.
-- Navigation structure is defined per-section via `meta.json` (and `meta.zh.json`).
-- Dev server: `cd website && npm run dev` → opens at `http://localhost:3000`.
-- Build: `cd website && npm run build`. Post-build syncs search index to Algolia via `scripts/sync-algolia.mjs`.
 
 ## Verified Commands
 
@@ -133,7 +123,7 @@ Version-numbering convention: **`minor` increments mark milestones, not individu
 
 - Do not name competitor products anywhere in repository content — code comments, `plans/`, docs, Jira/GitHub issue text, changelog entries, commit messages. Describe external practice generically ("a common desktop-app pattern"), never "inspired by X" or "as done by X".
 - Dependency attributions (e.g. `(Huskui.Avalonia)`) and references to upstream libraries or specs are unaffected.
-- Sole exception: `website/content/docs/comparisons/` may compare only against the vanilla Minecraft launcher (the official baseline) and Prism Launcher (the community baseline). Both are mainstream enough that naming them carries no fan-community backlash risk; smaller launchers have tribal followings — keep them unnamed everywhere.
+- Sole exception: comparison documents may name only the vanilla Minecraft launcher (the official baseline) and Prism Launcher (the community baseline). Both are mainstream enough that naming them carries no fan-community backlash risk; smaller launchers have tribal followings — keep them unnamed everywhere.
 
 ## Expected Build Noise
 

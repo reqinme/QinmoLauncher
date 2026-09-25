@@ -222,7 +222,6 @@ Use Ubuntu 22.04+, Debian 12+, or another distribution that ships glibc 2.34 or 
 
 ```sh
 Polymerium/
-├── website/        # Documentation & project site
 ├── src/            # Application source code
 ├── submodules/     # Embedded third-party project sources
 ├── notes/          # Internal notes

@@ -214,7 +214,6 @@ ldd --version
 
 ```sh
 Polymerium/
-├── website/        # 文档与项目网站
 ├── src/            # 应用源码
 ├── submodules/     # 引入的外部项目源码
 ├── notes/          # 内部笔记
