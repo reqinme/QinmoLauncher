@@ -1,4 +1,4 @@
-﻿<root>
+<root>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -2815,7 +2815,7 @@
         <value>我们可能收集的信息</value>
     </data>
     <data name="OobePrivacy_WhatWeCollectDescription" xml:space="preserve">
-        <value>当 Polymerium 崩溃或遇到意外错误时，会向我们的错误监控服务商 Sentry 发送报告：异常类型、消息、堆栈，以及少量诊断标签。此外每次启动还会发送一个轻量心跳，用于统计崩溃率。</value>
+        <value>当 QinmoLauncher 遇到意外错误时，会在项目仓库的 GitHub Issue 中提交一份报告：异常类型、消息、堆栈，以及应用版本、操作系统、界面语言等运行环境信息。这些 Issue 是公开的，且提交前会把你的用户目录替换为 %USERPROFILE%。绝不包含账户凭据、游戏内容与机器名。</value>
     </data>
     <data name="OobePrivacy_OurPromiseTitle" xml:space="preserve">
         <value>我们的承诺</value>
@@ -2845,7 +2845,7 @@
         <value>发送崩溃报告和会话记录</value>
     </data>
     <data name="OobePrivacy_CrashReportingToggleDescription" xml:space="preserve">
-        <value>开启后，Polymerium 会向 Sentry 发送异常详情（类型、消息、堆栈）和会话记录，用于统计崩溃率。关闭后所有遥测彻底停止。重启后生效。</value>
+        <value>开启后，QinmoLauncher 会把意外错误作为 Issue 提交到项目的公开 GitHub 仓库。关闭后所有上报彻底停止。立即生效。</value>
     </data>
     <!-- Maintenance Storage View -->
     <data name="MaintenanceStoragePage_Title" xml:space="preserve">

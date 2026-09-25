@@ -67,13 +67,6 @@
                         Foreground="{StaticResource ControlSecondaryForegroundBrush}"
                         TextWrapping="Wrap">
                         <Run Text="{Translate {x:Static app:LanguageManager+Keys.OobePrivacy_WhatWeCollectDescription}}" />
-                        <HyperlinkButton
-                            FontSize="{StaticResource SmallFontSize}"
-                            NavigateUri="https://sentry.io/privacy">
-                            <husk:IconLabel
-                                Icon="Open"
-                                Text="Sentry.io Privacy Policy" />
-                        </HyperlinkButton>
                     </TextBlock>
                 </StackPanel>
             </Grid>

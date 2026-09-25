@@ -22,7 +22,6 @@ using Polymerium.Avalonia.Rendering;
 using Polymerium.Avalonia.Services;
 using Polymerium.Avalonia.Services.Sinks;
 using Polymerium.Avalonia.Snapshots;
-using Sentry;
 using TridentCore.Abstractions;
 using TridentCore.Abstractions.Adapters;
 using TridentCore.Abstractions.Exporters;
@@ -41,7 +40,6 @@ namespace Polymerium.Avalonia;
 public static class Startup
 {
     private static SingleInstance? _singleInstance;
-    private static bool _sentryInitialized;
 
     public static void ConfigureServices(IServiceCollection services, bool debug)
     {
@@ -245,45 +243,11 @@ public static class Startup
         //  Huskui 以 NuGet 消费、无法挂 BlurBackdrop.ExcludeFromCapture，只能在此按名登记全局排除。
         BlurBackdrop.ExcludedRoots.Add("PART_SmokeMask");
 
-        #region SentrySdk Init (only in Release)
-
-        if (!Program.IsDebug && !File.Exists(PathDef.Default.FileOfTelemetrySwitch()))
-        {
-            SentrySdk.Init(options =>
-            {
-                options.Dsn = "https://70f1e791a5f2b8cb31f0947a1bac5e7a@o941379.ingest.us.sentry.io/4510328831410176";
-                options.AutoSessionTracking = true;
-                options.Environment = "Production";
-                options.Release = Program.Version;
-                options.CacheDirectoryPath = PathDef.Default.PrivateCacheDirectory();
-                options.AddExceptionFilterForType<OperationCanceledException>();
-                options.AddExceptionFilterForType<TaskCanceledException>();
-                options.SetBeforeSend(@event =>
-                {
-                    if (@event.Tags.TryGetValue("qinmolauncher.source", out var source))
-                    {
-                        @event.SetFingerprint("{{ default }}", source);
-                    }
-
-                    return @event;
-                });
-                options.SendDefaultPii = false;
-            });
-            _sentryInitialized = true;
-        }
-
-        #endregion
-
         return true;
     }
 
     public static void DeinitializeUnhostedServices()
     {
-        if (_sentryInitialized)
-        {
-            SentrySdk.Close();
-        }
-
         _singleInstance?.Dispose();
     }
 

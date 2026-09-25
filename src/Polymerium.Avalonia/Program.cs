@@ -12,7 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Polymerium.Avalonia.Services;
 using Polymerium.Avalonia.Services.Sinks;
-using Sentry;
 using SQLitePCL;
 using TridentCore.Abstractions;
 using TridentCore.Core.Lifetimes;
@@ -60,6 +59,12 @@ internal static class Program
         #region 0. 这些设置需要在整个应用启动的第一时间完成
 
         PathDef.BrandNames = new("qinmolauncher", "QinmoLauncher", "dev.reqinme.qinmolauncher");
+
+        if (GitHubIssueReporter.SelfTestRequested)
+        {
+            Console.WriteLine($"error-report self-check: {GitHubIssueReporter.SelfCheck()}");
+            return;
+        }
 
         if (!Startup.InitializeUnhostedServices())
         {
@@ -125,7 +130,7 @@ internal static class Program
             try
             {
                 // the CTS self-cancels at 10s; WaitAsync then throws OperationCanceledException,
-                // which Sentry filters out — so a slow shutdown times out silently rather than being
+                // which the reporter filters out — so a slow shutdown times out silently rather than being
                 // misreported as a crash.
                 using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
                 runtime.StopAsync(cts.Token).WaitAsync(cts.Token).GetAwaiter().GetResult();
@@ -165,7 +170,7 @@ internal static class Program
                                      "shutdown",
                                      false,
                                      false,
-                                     SentryLevel.Warning));
+                                     ErrorReporter.ErrorReportLevel.Warning));
         }
 
         #endregion

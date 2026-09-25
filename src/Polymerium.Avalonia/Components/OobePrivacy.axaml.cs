@@ -13,7 +13,7 @@ public partial class OobePrivacy : OobeStep
 
     public OobePrivacy() => InitializeComponent();
 
-    // opt-out 开关。_no_telemetry_ 文件存在即跳过 SentrySdk.Init（见 Startup），
+    // opt-out 开关。_no_telemetry_ 文件存在即禁用它处的 GitHub Issue 上报（见 GitHubIssueReporter），
     // 与 SettingsPageModel.CrashReportingEnabled 共用同一文件作为唯一事实源。
     public bool IsCrashReportingEnabled
     {

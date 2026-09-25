@@ -2827,7 +2827,7 @@
         <value>What We May Collect</value>
     </data>
     <data name="OobePrivacy_WhatWeCollectDescription" xml:space="preserve">
-        <value>When Polymerium crashes or hits an unexpected error, it sends a report to our error-monitoring provider Sentry: the exception type, message, stack trace, and a few diagnostic tags. It also sends a lightweight launch ping so we can track crash-free rates.</value>
+        <value>When QinmoLauncher hits an unexpected error, it files a report on the project&apos;s GitHub issue tracker: the exception type, message, and stack trace, plus runtime details such as app version, OS, and UI language. Those issues are public, and your user profile path is replaced with %USERPROFILE% before submission. No account credentials, game content, or machine name are ever included.</value>
     </data>
     <data name="OobePrivacy_OurPromiseTitle" xml:space="preserve">
         <value>Our Promise</value>
@@ -2857,7 +2857,7 @@
         <value>Send crash reports and launch pings</value>
     </data>
     <data name="OobePrivacy_CrashReportingToggleDescription" xml:space="preserve">
-        <value>When enabled, Polymerium sends exception details (type, message, stack trace) and a launch ping to Sentry to track crash-free rates. Disabling it stops all telemetry entirely. Takes effect after restart.</value>
+        <value>When enabled, QinmoLauncher files unexpected errors as issues on the project&apos;s public GitHub tracker. Disabling it stops all reporting entirely. Takes effect immediately.</value>
     </data>
     <!-- Maintenance Storage View -->
     <data name="MaintenanceStoragePage_Title" xml:space="preserve">

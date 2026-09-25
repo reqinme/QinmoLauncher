@@ -15,7 +15,6 @@ using Huskui.Avalonia.Mvvm.Activation;
 using Microsoft.Extensions.DependencyInjection;
 using Polymerium.Avalonia.Pages;
 using Polymerium.Avalonia.Services;
-using Sentry;
 using TridentCore.Core.Lifetimes;
 
 namespace Polymerium.Avalonia;
@@ -35,11 +34,11 @@ public class App : Application
                 "runtime",
                 true,
                 e.IsTerminating,
-                e.IsTerminating ? SentryLevel.Fatal : SentryLevel.Error));
+                e.IsTerminating ? ErrorReporter.ErrorReportLevel.Fatal : ErrorReporter.ErrorReportLevel.Error));
         TaskScheduler.UnobservedTaskException += (_, e) =>
         {
             // 网络/传输层异常（代理/VPN/防火墙致 TLS 握手损坏等）是用户环境问题而非应用 bug，
-            // 吞掉避免崩溃，但仍以 Warning 上报 Sentry，便于区分网络代码错误与用户环境问题。
+            // 吞掉避免崩溃，但仍以 Warning 上报，便于区分网络代码错误与用户环境问题。
             if (IsNetworkRelatedException(e.Exception))
             {
                 e.SetObserved();
@@ -48,7 +47,7 @@ public class App : Application
                                          "runtime",
                                          false,
                                          false,
-                                         SentryLevel.Warning));
+                                         ErrorReporter.ErrorReportLevel.Warning));
                 return;
             }
 
@@ -57,14 +56,14 @@ public class App : Application
                                      "runtime",
                                      true,
                                      false,
-                                     SentryLevel.Warning));
+                                     ErrorReporter.ErrorReportLevel.Warning));
         };
         Dispatcher.UIThread.UnhandledException += (_, e) => ErrorReporter.Report(e.Exception,
             new(ErrorReporter.ErrorReportSource.DispatcherUnhandled,
                 "runtime",
                 true,
                 !e.Handled,
-                !e.Handled ? SentryLevel.Fatal : SentryLevel.Error));
+                !e.Handled ? ErrorReporter.ErrorReportLevel.Fatal : ErrorReporter.ErrorReportLevel.Error));
 
         foreach (var styles in Styles)
         {
@@ -100,7 +99,7 @@ public class App : Application
     /// <summary>
     ///     判断异常链中是否包含网络/传输层异常。
     ///     用于在 UnobservedTaskException 中区分用户环境导致的网络失败（代理、VPN、防火墙破坏 TLS 握手等），
-    ///     这类异常不是应用 bug，吞掉后仍以 Warning 级别上报 Sentry，便于与真正的应用 bug 区分排查。
+    ///     这类异常不是应用 bug，吞掉后仍以 Warning 级别上报，便于与真正的应用 bug 区分排查。
     /// </summary>
     private static bool IsNetworkRelatedException(Exception? exception)
     {
@@ -155,7 +154,7 @@ public class App : Application
                                      "startup",
                                      true,
                                      true,
-                                     SentryLevel.Fatal));
+                                     ErrorReporter.ErrorReportLevel.Fatal));
             Dispatcher.UIThread.Post(() =>
             {
                 _exitState = ExitState.Ready;

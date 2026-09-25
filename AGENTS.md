@@ -16,7 +16,7 @@
 This repo bundles two layers in one solution; knowing which is the core shapes every decision.
 
 - **Trident** (`submodules/Trident.Net`) is the **core engine** — the .NET implementation of a declarative Minecraft instance toolchain. It owns every piece of real logic: the data model (`profile.json`, the `build/` + `import/` + `persist/` layering, `pref://` package references), the deploy and run engine, package repositories (Modrinth, CurseForge), account authentication (Microsoft / Xbox Live / Mojang / offline), and modpack import/export (Trident, Modrinth, CurseForge, MultiMC, Packwiz). Core exposes this capability through five managers — `ProfileManager`, `InstanceManager`, `RepositoryAgent`, `ImporterAgent`, `ExporterAgent` — plus DI extensions such as `AddPrismLauncher` / `AddMicrosoft` / `AddMinecraft`. The same core also powers the standalone `trident` CLI and an MCP server (`--mcp`), so Trident is what both the CLI and Polymerium sit on. For the authoritative model and integration guide, read `submodules/Trident.Net/README.md` and `submodules/Trident.Net/AGENTS.md` before working inside the submodule.
-- **Polymerium** (`src/Polymerium.Avalonia`) is the **desktop shell** over Core — a peer to the `trident` CLI, not a re-implementation of Trident's logic. `Polymerium.Avalonia.csproj` references only `TridentCore.Core`, and `Startup.cs` re-registers the exact same Trident services and managers the CLI registers. Because Polymerium and the CLI wrap the same Core — same `profile.json`, same `.trident` data layout, same managers — an instance created or managed by one is directly readable and operable by the other; Polymerium is not a competing instance format, it is the desktop presentation of a Trident instance. Polymerium does **not** re-implement instance management, deployment, repositories, accounts, or import/export — it drives Trident's managers and layers a stylized desktop experience on top: the MVVM page/dialog/modal/toast UI, Huskui theming, local persistence (FreeSql), self-update (Velopack), crash reporting (Sentry), and HTTP caching.
+- **Polymerium** (`src/Polymerium.Avalonia`) is the **desktop shell** over Core — a peer to the `trident` CLI, not a re-implementation of Trident's logic. `Polymerium.Avalonia.csproj` references only `TridentCore.Core`, and `Startup.cs` re-registers the exact same Trident services and managers the CLI registers. Because Polymerium and the CLI wrap the same Core — same `profile.json`, same `.trident` data layout, same managers — an instance created or managed by one is directly readable and operable by the other; Polymerium is not a competing instance format, it is the desktop presentation of a Trident instance. Polymerium does **not** re-implement instance management, deployment, repositories, accounts, or import/export — it drives Trident's managers and layers a stylized desktop experience on top: the MVVM page/dialog/modal/toast UI, Huskui theming, local persistence (FreeSql), self-update (Velopack), crash reporting (GitHub Issues), and HTTP caching.
 
 Rule of thumb: when a behavior spans both layers, the real logic almost certainly belongs in Trident, with Polymerium adapting to the new surface — not the other way around.
 
@@ -244,7 +244,7 @@ This pairs with, but is distinct from, *View State Representation* above: that d
 
 A property setter assigns the value and raises the change — nothing else. Reactions to that change (derived state, cascades, side effects) live in the change callback, the single point that fires whether the value comes from two-way binding, code-behind, or initialization. Two carriers, one rule: custom controls (`AvaloniaObject` + `DirectProperty`/`StyledProperty`) override `OnPropertyChanged(change)` and dispatch on `change.Property`; ViewModels (`[ObservableProperty]`) implement `partial void OnXxxChanged(T value)`.
 
-## External Tracking (Jira / GitHub / Sentry)
+## External Tracking (Jira / GitHub)
 
 Fixed parameters — reuse these directly when calling MCP, do not rediscover them each time:
 
@@ -254,9 +254,7 @@ Fixed parameters — reuse these directly when calling MCP, do not rediscover th
 - **Issue types** (pass the Chinese name as `issueTypeName`): 故障 (Bug)=`10070`, 任务 (Task)=`10001`, 长篇故事 (Epic)=`10002`, 子任务 (Sub-task)=`10003`
 - **fixVersion**: every newly created issue is attached to the latest unreleased version via `additional_fields: {"fixVersions": [{"name": "vX.Y.Z"}]}`. No MCP tool lists versions directly — find the current milestone with JQL `project = POLY AND fixVersion in unreleasedVersions() ORDER BY created DESC` and read it from the returned issues' fixVersions.
 - **GitHub**: owner=`d3ara1n`, repo=`Polymerium`
-- **Sentry**: organizationSlug=`gravitylab`, regionUrl=`https://us.sentry.io`, projectSlug=`polymerium`
-  - Issue search uses `projectSlugOrId="polymerium"`.
-  - Event search uses `projectSlug="polymerium"`.
+- **Runtime error reporting**: unhandled exceptions are filed as GitHub issues by `GitHubIssueReporter`. It stays disabled unless `QINMOLAUNCHER_ERROR_REPORT_TOKEN` and `QINMOLAUNCHER_ERROR_REPORT_REPO` are set, and `_no_telemetry_` in the private config directory suppresses it unconditionally. See `docs/error-reporting.md`.
 
 Linking convention (follow when transcribing a GitHub issue to Jira):
 
@@ -270,10 +268,9 @@ NOTE: the site URL / cloudId / project key are not secret on their own — witho
 Linking keywords are actions, not just references — they fire when the commit lands on `main`:
 
 - GitHub: `fixes/closes/resolves #nnn` in a commit message or PR description auto-closes the issue.
-- Sentry: `Fixes <ISSUE-SHORT-ID>` (e.g. `Fixes POLYMERIUM-2D`) auto-resolves the Sentry issue.
 
 Only use these when the commit actually eliminates the error. For environment-caused reports
-(e.g. below-minimum OS versions), set the Sentry issue to **Ignored** via the MCP API instead —
+(e.g. below-minimum OS versions), close the GitHub issue as **not planned** instead —
 Resolved would be reopened by the next matching event. Neither platform offers a keyword for
 Ignored; that status change is API/UI only.
 

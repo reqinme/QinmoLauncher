@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using Sentry;
 
 namespace Polymerium.Avalonia;
 
@@ -12,20 +11,7 @@ internal static class ErrorReporter
     {
         if (core is Exception ex)
         {
-            SentrySdk.CaptureException(ex,
-                                       scope =>
-                                       {
-                                           scope.Level = meta.Level;
-                                           // 打标签便于 Sentry 搜索/筛选。
-                                           scope.SetTag("qinmolauncher.source", meta.Source.ToString());
-                                           scope.SetTag("qinmolauncher.phase", meta.Phase);
-                                           scope.SetTag("qinmolauncher.critical", meta.Critical ? "true" : "false");
-                                           scope.SetTag("qinmolauncher.likely_crash", meta.Terminating ? "true" : "false");
-                                           scope.SetExtra("exception.type.full",
-                                                          ex.GetType().FullName ?? ex.GetType().Name);
-                                           scope.SetExtra("exception.message", ex.Message);
-                                           scope.SetExtra("exception.is_aggregate", ex is AggregateException);
-                                       });
+            GitHubIssueReporter.Report(ex, meta);
         }
 
         Dump(core);
@@ -58,7 +44,7 @@ internal static class ErrorReporter
         File.WriteAllText(path, sb.ToString());
     }
 
-    private static void DumpCore(StringBuilder builder, object core, int level)
+    internal static void DumpCore(StringBuilder builder, object core, int level)
     {
         switch (core)
         {
@@ -110,10 +96,15 @@ internal static class ErrorReporter
         AppDomainUnhandled, DispatcherUnhandled, TaskUnobserved, NetworkUnobserved, LifetimeStartup, LifetimeShutdown
     }
 
+    internal enum ErrorReportLevel
+    {
+        Warning, Error, Fatal
+    }
+
     internal readonly record struct ErrorReportMeta(
         ErrorReportSource Source,
         string Phase,
         bool Critical,
         bool Terminating,
-        SentryLevel Level);
+        ErrorReportLevel Level);
 }
